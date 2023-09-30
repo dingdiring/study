@@ -8,7 +8,8 @@
     }
     function print_description() {
         if(isset($_GET['id'])){
-            echo htmlspecialchars(file_get_contents("data/".$_GET['id']));
+            $basename = basename("data/".$_GET['id']);
+            echo htmlspecialchars(file_get_contents("data/".$basename));
         } else {
             print "welcome hoho";
         }
